@@ -15,7 +15,6 @@ const Banner: React.FC = () => {
     loop: true, // Enable looping
   });
 
-  // Auto-slide logic
   useEffect(() => {
     if (slider) {
       timerRef.current = setInterval(() => {
