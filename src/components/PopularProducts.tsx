@@ -2,7 +2,7 @@
 import Container from "./Container";
 import heading from "../assets/hedimg.png";
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { treeBlog } from "@/constant";
 import { FaEye, FaHeart } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
