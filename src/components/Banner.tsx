@@ -68,7 +68,7 @@ const Banner: React.FC = () => {
           </div>
 
           {/* Content Overlay */}
-          <div className="absolute right-10 top-1/2 max-w-2xl transform -translate-y-1/2 p-6">
+          <div className="absolute   right-10 top-1/2 max-w-2xl transform -translate-y-1/2 p-6">
             <h2 className="text-4xl font-bold text-gray-900">{slide.title}</h2>
             <p className="mt-2 text-gray-700">{slide.description}</p>
             <button className="mt-4 bg-green-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition">
