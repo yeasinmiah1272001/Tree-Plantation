@@ -12,6 +12,15 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      animation: {
+        "zoom-out": "zoomOut 4s ease-in-out infinite",
+      },
+      keyframes: {
+        zoomOut: {
+          "0%": { transform: "scale(1.1)" },
+          "100%": { transform: "scale(1)" },
+        },
+      },
     },
   },
   plugins: [],
