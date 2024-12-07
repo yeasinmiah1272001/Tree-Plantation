@@ -7,7 +7,7 @@ export const navigationLinks = [
   { name: "Contact", path: "/contact" },
 ];
 
-[
+export const treeBlog = [
   {
     id: 1,
     title: "Ficus Bonsai Tree",
