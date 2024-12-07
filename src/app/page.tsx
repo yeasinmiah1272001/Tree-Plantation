@@ -1,5 +1,6 @@
 import Banner from "@/components/Banner";
 import Featured from "@/components/Featured";
+import NewCollection from "@/components/NewCollection";
 import React from "react";
 
 const HomePage = () => {
@@ -7,6 +8,7 @@ const HomePage = () => {
     <div>
       <Banner />
       <Featured />
+      <NewCollection />
     </div>
   );
 };
