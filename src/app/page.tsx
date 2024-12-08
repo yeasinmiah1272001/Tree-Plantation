@@ -4,7 +4,8 @@ import HouseShapePlant from "@/components/HouseShapePlant";
 import NewCollection from "@/components/NewCollection";
 import PopularProducts from "@/components/PopularProducts";
 import SpecialsTreeCollection from "@/components/SpecialsTreeCollection";
-import React from "react";
+import Reviews from "@/components/Reviews";
+import Brand from "@/components/Brand";
 
 const HomePage = () => {
   return (
@@ -15,6 +16,8 @@ const HomePage = () => {
       <PopularProducts />
       <HouseShapePlant />
       <SpecialsTreeCollection />
+      <Brand />
+      <Reviews />
     </div>
   );
 };
