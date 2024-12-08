@@ -4,7 +4,7 @@ export const navigationLinks = [
   { name: "Blogs", path: "/blog" },
   { name: "Orchid", path: "/orchid" },
   { name: "About", path: "/about" },
-  { name: "Contact", path: "/contact" },
+  { name: "Contacts", path: "/contact" },
 ];
 
 export const treeBlog = [
