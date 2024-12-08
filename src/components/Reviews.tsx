@@ -16,7 +16,6 @@ const Reviews: React.FC = () => {
       feedback: "The quality of the products is outstanding. Highly recommend!",
       rating: 4,
     },
-
     {
       id: 4,
       name: "Emily Davis",
@@ -43,7 +42,7 @@ const Reviews: React.FC = () => {
       <h2 className="text-3xl font-bold text-center mb-6 text-gray-800">
         What Our Customers Say
       </h2>
-      <Marquee gradient={false} speed={50} className="px-4">
+      <Marquee direction="right" gradient={false} speed={50} className="px-4">
         {reviews.map((review) => (
           <div
             key={review.id}
@@ -63,7 +62,9 @@ const Reviews: React.FC = () => {
               ))}
             </div>
             {/* Feedback */}
-            <p className="text-gray-600 text-sm italic">"{review.feedback}"</p>
+            <p className="text-gray-600 text-sm italic">
+              &quot;{review.feedback}&quot;
+            </p>
           </div>
         ))}
       </Marquee>

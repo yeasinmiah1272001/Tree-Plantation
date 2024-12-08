@@ -11,7 +11,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import Link from "next/link";
 
 const PopularProducts = () => {
   const [selectedProducts, setSelectedProducts] = useState("All");
