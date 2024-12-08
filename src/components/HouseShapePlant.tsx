@@ -50,7 +50,7 @@ const HouseShapePlant = () => {
             alt="image"
           />
           <div className="absolute top-6 left-4">
-            <h3 className="text-gray-600 text-xl font-medium">Fresh Flower</h3>
+            <h3 className="text-gray-600 text-xl font-medium">Fresh Flowers</h3>
             <h1 className="text-black text-2xl font-bold">Hanging Planter</h1>
             <button className="mt-4 px-4 py-2 border border-gray-400 bg-transparent hover:bg-green-500 text-black text-sm font-semibold rounded-md shadow-md transition duration-300">
               SHOP NOW
@@ -70,7 +70,7 @@ const HouseShapePlant = () => {
               Collection Of Cactus
             </h3>
             <h1 className="text-black text-2xl font-bold">
-              Ceramic Pot & Plant
+              Ceramic Pot & Plants
             </h1>
             <button className="mt-4 px-4 py-2 border border-gray-400 bg-transparent hover:bg-green-500 text-black text-sm font-semibold rounded-md shadow-md transition duration-300">
               SHOP NOW
