@@ -32,7 +32,8 @@ const Footer: React.FC = () => {
         <div className="">
           <h3 className="font-bold mb-4">OUR ADDRESS</h3>
           <p className="flex items-center text-sm mb-2">
-            <FaEnvelope className="text-green-600 mr-2" /> demo@demo.com
+            <FaEnvelope className="text-green-600 mr-2" />{" "}
+            yeasinmiah1272001@gmail.com
           </p>
           <p className="flex items-center text-sm mb-2">
             <FaMapMarkerAlt className="text-green-600 mr-2" /> 1093 Marigold
@@ -60,7 +61,7 @@ const Footer: React.FC = () => {
         <div className="border-l border-gray-300 pl-6">
           <h3 className="font-bold mb-4">INFORMATION</h3>
           <ul className="space-y-2 text-sm text-gray-600">
-            <li>FAQ's</li>
+            <li>FAQs</li>
             <li>Delivery Information</li>
             <li>Contact Us</li>
             <li>Wishlist</li>
