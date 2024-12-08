@@ -62,7 +62,7 @@ const Reviews: React.FC = () => {
       </div>
 
       <div className="w-full overflow-hidden py-10">
-        <Marquee gradient={false} speed={40} className="py-4">
+        <Marquee direction="right" gradient={false} speed={40} className="py-4">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
