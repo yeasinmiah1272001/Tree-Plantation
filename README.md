@@ -33,9 +33,9 @@ Check out the live demo here: [Tree Plantation Project Demo](#)
 
 ## 🖼️ Screenshots
 
-| Homepage                  | Donation Page                  |
-| ------------------------- | ------------------------------ |
-| ![Homepage Screenshot](#) | ![Donation Page Screenshot](#) |
+| Homepage                                                    | Donation Page                                                   |
+| ----------------------------------------------------------- | --------------------------------------------------------------- | ----------------------------------------------------------- | --------------------------------------------------------------- |
+| ![Homepage Screenshot](</src/assets/Screenshot%20(32).png>) | ![Donation Page Screenshot](<src/assets/Screenshot%20(33).png>) | ![Homepage Screenshot](</src/assets/Screenshot%20(34).png>) | ![Donation Page Screenshot](<src/assets/Screenshot%20(35).png>) |
 
 ---
 
