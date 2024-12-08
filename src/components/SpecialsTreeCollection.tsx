@@ -69,8 +69,10 @@ const SpecialsTreeCollection = () => {
                 alt={`Product ${item.title}`}
                 height={300}
                 width={300}
-                className={`w-full h-full object-cover transition-transform duration-500 ${
-                  hoveredProduct === index ? "scale-105" : "scale-100"
+                className={`w-full h-full object-cover transition-transform duration-1000 ${
+                  hoveredProduct === index
+                    ? "scale-105 duration-1000"
+                    : "scale-100 duration-1000"
                 }`}
               />
             </div>
