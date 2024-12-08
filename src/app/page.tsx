@@ -3,6 +3,7 @@ import Featured from "@/components/Featured";
 import HouseShapePlant from "@/components/HouseShapePlant";
 import NewCollection from "@/components/NewCollection";
 import PopularProducts from "@/components/PopularProducts";
+import SpecialsTreeCollection from "@/components/SpecialsTreeCollection";
 import React from "react";
 
 const HomePage = () => {
@@ -13,6 +14,7 @@ const HomePage = () => {
       <NewCollection />
       <PopularProducts />
       <HouseShapePlant />
+      <SpecialsTreeCollection />
     </div>
   );
 };
