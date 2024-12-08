@@ -1,74 +1,101 @@
-import React from "react";
+import { FaQuoteRight } from "react-icons/fa"; // For the quote icon
 import Marquee from "react-fast-marquee";
-import { FaStar } from "react-icons/fa";
+import img1 from "../assets/1.png";
+import img2 from "../assets/2.png";
+import img3 from "../assets/3.png";
+import Image from "next/image";
+import Container from "./Container";
+import heading from "../assets/hedimg.png";
+
+const testimonials = [
+  {
+    name: "Phoenix Baker",
+    role: "Client",
+    image: img1,
+    content:
+      "Lorem ipsum dolor sit amet, conse adipisic elit, sed do eiusmod tempo incididunt ut labore et dolore. magna",
+  },
+  {
+    name: "Sarah Wilson",
+    role: "Client",
+    image: img2,
+    content:
+      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  },
+  {
+    name: "Michael Chen",
+    role: "Client",
+    image: img3,
+    content:
+      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  },
+  {
+    name: "Emma Thompson",
+    role: "Client",
+    image: img1,
+    content:
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+  },
+  {
+    name: "David Rodriguez",
+    role: "Client",
+    image: img2,
+    content:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.",
+  },
+];
 
 const Reviews: React.FC = () => {
-  const reviews = [
-    {
-      id: 1,
-      name: "John Doe",
-      feedback: "Absolutely amazing service! Everything was perfect.",
-      rating: 5,
-    },
-    {
-      id: 2,
-      name: "Jane Smith",
-      feedback: "The quality of the products is outstanding. Highly recommend!",
-      rating: 4,
-    },
-    {
-      id: 4,
-      name: "Emily Davis",
-      feedback: "Very satisfied with my purchase. Great attention to detail.",
-      rating: 5,
-    },
-    {
-      id: 6,
-      name: "Emily Davis",
-      feedback: "Very satisfied with my purchase. Great attention to detail.",
-      rating: 5,
-    },
-    {
-      id: 5,
-      name: "Chris Johnson",
-      feedback:
-        "Good service, but delivery took slightly longer than expected.",
-      rating: 3,
-    },
-  ];
-
   return (
-    <div className="bg-gray-100 py-8">
-      <h2 className="text-3xl font-bold text-center mb-6 text-gray-800">
-        What Our Customers Say
-      </h2>
-      <Marquee direction="right" gradient={false} speed={50} className="px-4">
-        {reviews.map((review) => (
-          <div
-            key={review.id}
-            className="bg-white shadow-lg rounded-lg p-6 mx-4 w-64 text-center hover:shadow-xl transition-shadow duration-300"
-          >
-            {/* User image placeholder */}
-            <div className="w-16 h-16 mx-auto rounded-full bg-gray-200 mb-4 flex items-center justify-center text-xl font-bold text-gray-500">
-              {review.name.charAt(0)}
+    <Container className="">
+      <div className="text-center space-y-4">
+        <h1 className="text-3xl font-extrabold text-gray-900 md:text-4xl">
+          Client Review
+        </h1>
+        <div className="mt-4">
+          <Image
+            src={heading}
+            alt="Popular Tree Collection Image"
+            className="mx-auto object-cover"
+          />
+        </div>
+      </div>
+
+      <div className="w-full overflow-hidden py-10">
+        <Marquee gradient={false} speed={40} className="py-4">
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              className="mx-4 w-[350px] relative overflow-hidden bg-white shadow-lg rounded-lg"
+            >
+              <div className="p-6">
+                <div className="absolute top-0 right-0 w-32 h-32">
+                  <div className="absolute top-0 right-0 w-full h-full hover:bg-gray-400 duration-300 bg-[#A6D388] rounded-bl-[100%] flex items-start justify-end p-4">
+                    <FaQuoteRight className="text-white text-xl" />
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="w-16 h-16 border-4 border-[#A6D388] rounded-full overflow-hidden">
+                    <Image
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold tracking-tight">
+                      {testimonial.name}
+                    </h3>
+                    <p className="text-sm text-gray-500">{testimonial.role}</p>
+                  </div>
+                  <p className="text-gray-600">{testimonial.content}</p>
+                </div>
+              </div>
             </div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">
-              {review.name}
-            </h3>
-            {/* Star Rating */}
-            <div className="flex justify-center my-2 text-yellow-400">
-              {Array.from({ length: review.rating }).map((_, index) => (
-                <FaStar key={index} />
-              ))}
-            </div>
-            {/* Feedback */}
-            <p className="text-gray-600 text-sm italic">
-              &quot;{review.feedback}&quot;
-            </p>
-          </div>
-        ))}
-      </Marquee>
-    </div>
+          ))}
+        </Marquee>
+      </div>
+    </Container>
   );
 };
 
