@@ -2,8 +2,9 @@ import React from "react";
 import Container from "../Container";
 import Image from "next/image";
 import logo from "../../assets/logo.svg";
-import { FaSearch, FaShoppingBag, FaUser } from "react-icons/fa";
+import { FaShoppingBag, FaUser } from "react-icons/fa";
 import Link from "next/link";
+import SearchBar from "../SearchBar";
 
 const TopHeader = () => {
   return (
@@ -15,20 +16,8 @@ const TopHeader = () => {
             <Image className="h-8" src={logo} alt="logo" />
           </div>
         </Link>
-
         {/* Search Bar */}
-        <div className="hidden relative sm:flex w-full max-w-[400px] mx-auto">
-          <input
-            className="bg-gray-200 w-full p-2 rounded-lg outline-none border border-gray-300"
-            type="text"
-            placeholder="Search"
-          />
-          <span className="absolute top-3 right-4">
-            <FaSearch />
-          </span>
-        </div>
-
-        {/* User and Cart Sections */}
+        <SearchBar />/{/* User and Cart Sections */}
         <div className="md:flex hidden  items-center space-x-5">
           {/* My Account */}
           <div className="flex gap-2 items-center">
@@ -52,7 +41,6 @@ const TopHeader = () => {
             </div>
           </div>
         </div>
-
         {/* Mobile View - Search Bar, User, Cart */}
         <div className="flex sm:hidden items-center gap-5">
           {/* User */}
