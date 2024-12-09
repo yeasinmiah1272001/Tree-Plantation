@@ -1,6 +1,6 @@
 export const navigationLinks = [
   { name: "Home", path: "/" },
-  { name: "Shop", path: "/shop" },
+  { name: "Shop", path: "/allshop" },
   { name: "Blogs", path: "/blog" },
   { name: "Orchid", path: "/orchid" },
   { name: "About", path: "/about" },
@@ -19,6 +19,9 @@ export const treeBlog = [
     rating: 4.7,
     offer: "20% Off",
     category: "Featured",
+    isNewArrival: false,
+    isTrending: true,
+    popularity: 90,
     images: [
       { url: "https://i.ibb.co.com/PYGF760/1.webp" },
       { url: "https://i.ibb.co.com/2n2QxK2/1-300x300.webp" },
@@ -36,6 +39,9 @@ export const treeBlog = [
     rating: 4.8,
     offer: "Save $30",
     category: "Featured",
+    isNewArrival: true,
+    isTrending: true,
+    popularity: 95,
     images: [
       { url: "https://i.ibb.co.com/ggxRX5W/3-300x300.webp" },
       { url: "https://i.ibb.co.com/yVGJZWG/4.webp" },
@@ -53,6 +59,9 @@ export const treeBlog = [
     rating: 4.5,
     offer: "18% Off",
     category: "Featured",
+    isNewArrival: false,
+    isTrending: true,
+    popularity: 85,
     images: [
       { url: "https://i.ibb.co.com/gSXHKt3/6.webp" },
       { url: "https://i.ibb.co.com/LrzHQkz/7-300x300.webp" },
@@ -70,6 +79,9 @@ export const treeBlog = [
     rating: 4.6,
     offer: "15% Off",
     category: "Featured",
+    isNewArrival: true,
+    isTrending: false,
+    popularity: 75,
     images: [
       { url: "https://i.ibb.co.com/vw3y5gm/10-300x300.webp" },
       { url: "https://i.ibb.co.com/vXHT2Zf/11.webp" },
@@ -87,6 +99,9 @@ export const treeBlog = [
     rating: 4.4,
     offer: "Save $15",
     category: "Bestselling",
+    isNewArrival: false,
+    isTrending: true,
+    popularity: 88,
     images: [
       { url: "https://i.ibb.co.com/zWcNMQ3/12-300x300.webp" },
       { url: "https://i.ibb.co.com/vx2qHzn/13-300x300.webp" },
@@ -104,6 +119,9 @@ export const treeBlog = [
     rating: 4.9,
     offer: "Save $35",
     category: "Bestselling",
+    isNewArrival: true,
+    isTrending: true,
+    popularity: 98,
     images: [
       { url: "https://i.ibb.co.com/hCY7dqt/15.webp" },
       { url: "https://i.ibb.co.com/6P0rsp4/16.webp" },
@@ -121,6 +139,9 @@ export const treeBlog = [
     rating: 4.5,
     offer: "18% Off",
     category: "Bestselling",
+    isNewArrival: false,
+    isTrending: true,
+    popularity: 87,
     images: [
       { url: "https://i.ibb.co.com/gRJBG9n/18.webp" },
       { url: "https://i.ibb.co.com/k8jdshL/21.webp" },
@@ -138,6 +159,9 @@ export const treeBlog = [
     rating: 4.6,
     offer: "Save $25",
     category: "Bestselling",
+    isNewArrival: true,
+    isTrending: false,
+    popularity: 83,
     images: [
       { url: "https://i.ibb.co.com/X4DRh14/23.webp" },
       { url: "https://i.ibb.co.com/mBtdMHZ/24.webp" },
@@ -155,6 +179,9 @@ export const treeBlog = [
     rating: 4.7,
     offer: "15% Off",
     category: "Latest",
+    isNewArrival: true,
+    isTrending: true,
+    popularity: 92,
     images: [
       { url: "https://i.ibb.co.com/gjbkQBY/25.webp" },
       { url: "https://i.ibb.co.com/NYxWtft/25-300x300.webp" },
@@ -172,6 +199,9 @@ export const treeBlog = [
     rating: 4.4,
     offer: "Save $10",
     category: "Latest",
+    isNewArrival: false,
+    isTrending: false,
+    popularity: 78,
     images: [
       { url: "https://i.ibb.co.com/Nxtfqrx/28-300x300.webp" },
       { url: "https://i.ibb.co.com/9r6M7pV/29.webp" },
@@ -189,6 +219,9 @@ export const treeBlog = [
     rating: 4.3,
     offer: "17% Off",
     category: "Latest",
+    isNewArrival: true,
+    isTrending: true,
+    popularity: 80,
     images: [
       { url: "https://i.ibb.co.com/6X0WB9q/30.webp" },
       { url: "https://i.ibb.co.com/jZHP7N8/490x490.jpg" },
@@ -206,6 +239,9 @@ export const treeBlog = [
     rating: 4.2,
     offer: "15% Off",
     category: "Latest",
+    isNewArrival: true,
+    isTrending: false,
+    popularity: 77,
     images: [
       { url: "https://i.ibb.co.com/zWcNMQ3/12-300x300.webp" },
       { url: "https://i.ibb.co.com/mDThQqw/9-300x300.webp" },
