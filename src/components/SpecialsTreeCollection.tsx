@@ -12,6 +12,7 @@ import { FaEye, FaHeart } from "react-icons/fa";
 import { MdEdit } from "react-icons/md";
 import { FaCartShopping } from "react-icons/fa6";
 import heading from "../assets/hedimg.png";
+import Link from "next/link";
 
 const SpecialsTreeCollection = () => {
   const [hoveredProduct, setHoveredProduct] = useState<number | null>(null);
@@ -83,12 +84,22 @@ const SpecialsTreeCollection = () => {
                 <span className="text-xl bg-green-300 p-2 rounded-md text-black">
                   <FaCartShopping />
                 </span>
-                <span className="text-xl bg-green-300 p-2 rounded-md text-black">
+                <Link
+                  href={{
+                    pathname: `/singlepage/${item.id}`,
+                  }}
+                  className="text-xl font-bold bg-green-300 p-2 rounded-md text-black"
+                >
                   <FaEye />
-                </span>
-                <span className="text-xl bg-green-300 p-2 rounded-md text-black">
+                </Link>
+                <Link
+                  href={{
+                    pathname: `/singlepage/${item.id}`,
+                  }}
+                  className="text-xl font-bold bg-green-300 p-2 rounded-md text-black"
+                >
                   <MdEdit />
-                </span>
+                </Link>
               </div>
             </div>
 
