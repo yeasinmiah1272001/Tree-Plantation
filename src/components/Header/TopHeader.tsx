@@ -17,7 +17,8 @@ const TopHeader = () => {
           </div>
         </Link>
         {/* Search Bar */}
-        <SearchBar />/{/* User and Cart Sections */}
+        <SearchBar />
+        {/* User and Cart Sections */}
         <div className="md:flex hidden  items-center space-x-5">
           {/* My Account */}
           <div className="flex gap-2 items-center">

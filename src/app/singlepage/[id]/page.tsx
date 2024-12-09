@@ -12,7 +12,7 @@ const SinglePage = async ({ params }: { params: Promise<{ id: number }> }) => {
   );
 
   return (
-    <Container className="">
+    <Container className="lg:mt-40 mt-16">
       <SinglePageContent singleData={singleData as TreeBlogItem} />
     </Container>
   );

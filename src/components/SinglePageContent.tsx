@@ -19,7 +19,7 @@ const SinglePageContent = ({ singleData }: { singleData: TreeBlogItem }) => {
             alt="Gamepad"
             height={400}
             width={400}
-            className="w-full h-auto rounded-lg border"
+            className="w-96 h-72 rounded-lg border"
           />
           <div className="grid grid-cols-4 gap-2">
             {singleData?.images?.map((image, index) => (
