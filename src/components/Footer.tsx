@@ -3,7 +3,7 @@ import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-100 text-gray-800">
+    <footer className="bg-[#DCFFAB]/70 text-gray-800">
       {/* Newsletter Section */}
       <div className="py-8 text-center mb-4">
         <div className="text-green-700 flex justify-center mb-4 text-4xl">
@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Footer Links Section */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 py-8 px-6 md:px-12 bg-gray-200">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 py-8 px-6 md:px-12 bg-[#DCFFAB]/20">
         {/* Our Address */}
         <div className="">
           <h3 className="font-bold mb-4">OUR ADDRESS</h3>

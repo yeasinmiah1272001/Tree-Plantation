@@ -3,15 +3,18 @@ import Container from "../Container";
 import Image from "next/image";
 import logo from "../../assets/logo.svg";
 import { FaSearch, FaShoppingBag, FaUser } from "react-icons/fa";
+import Link from "next/link";
 
 const TopHeader = () => {
   return (
     <div className="bg-white p-2 w-full border-b-2">
       <Container className="flex justify-between items-center gap-5">
         {/* Logo Section */}
-        <div className="flex-shrink-0">
-          <Image className="h-8" src={logo} alt="logo" />
-        </div>
+        <Link href={"/"}>
+          <div className="flex-shrink-0">
+            <Image className="h-8" src={logo} alt="logo" />
+          </div>
+        </Link>
 
         {/* Search Bar */}
         <div className="hidden relative sm:flex w-full max-w-[400px] mx-auto">
