@@ -39,7 +39,7 @@ const PopularProducts = () => {
       </div>
 
       {/* Tabs Section */}
-      <div className="mt-8 flex justify-center gap-6">
+      <div className="mt-8 hidden md:flex justify-center gap-6">
         {["All", "Featured", "Bestselling", "Latest"].map((category) => (
           <button
             className={`px-4 py-2 rounded-lg text-lg font-semibold transition-all duration-300 ease-in-out ${

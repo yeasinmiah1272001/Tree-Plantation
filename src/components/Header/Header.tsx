@@ -4,7 +4,7 @@ import BottomHeader from "./BottomHeader";
 
 const Header = () => {
   return (
-    <div>
+    <div className="fixed top-0 bg-white z-50 w-full">
       <TopHeader />
       <BottomHeader />
     </div>

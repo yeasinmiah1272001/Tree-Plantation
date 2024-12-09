@@ -28,11 +28,13 @@ const SpecialsTreeCollection = () => {
             src={heading}
             alt="Popular Tree Collection Image"
             className="mx-auto object-cover"
+            width={500} // Adjusted width for responsiveness
+            height={300} // Adjusted height
           />
         </div>
       </div>
       <Swiper
-        slidesPerView={2}
+        slidesPerView={1} // Default for mobile devices
         spaceBetween={15}
         autoplay={{
           delay: 3000,
@@ -40,11 +42,15 @@ const SpecialsTreeCollection = () => {
         }}
         breakpoints={{
           640: {
-            slidesPerView: 3,
+            slidesPerView: 2, // 2 slides on small screens (e.g., tablets)
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3, // 3 slides on medium screens
             spaceBetween: 20,
           },
           1024: {
-            slidesPerView: 4,
+            slidesPerView: 4, // 4 slides on larger screens (e.g., laptops)
             spaceBetween: 25,
           },
         }}
@@ -60,7 +66,7 @@ const SpecialsTreeCollection = () => {
             onMouseLeave={() => setHoveredProduct(null)}
           >
             {/* Product Image */}
-            <div className="relative w-full h-64">
+            <div className="relative w-full h-64 md:h-64 lg:h-64">
               <Image
                 src={
                   hoveredProduct === index
@@ -104,7 +110,7 @@ const SpecialsTreeCollection = () => {
             </div>
 
             {/* Heart Icon & Offer Tag */}
-            <span className="absolute  top-3 left-3">
+            <span className="absolute top-3 left-3">
               <FaHeart size={30} className="text-green-400" />
             </span>
             <span className="absolute top-3 right-3 bg-green-200 border border-gray-400 text-black p-1 px-2 rounded-md">

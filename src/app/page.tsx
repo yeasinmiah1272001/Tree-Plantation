@@ -11,7 +11,7 @@ import Landscaping from "@/components/Landscaping";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="overflow-hidden">
       <Banner />
       <Featured />
       <NewCollection />
