@@ -40,10 +40,9 @@ export const counterSlice = createSlice({
       const existProduct = state.cart.find(
         (item) => item.id === action.payload
       );
-      // @ts-expect-error
-      if (existProduct.quantity > 1) {
-        // @ts-expect-error
-        existProduct.quantity -= 1;
+
+      if (existProduct) {
+        existProduct.quantity! -= 1;
       }
     },
 
