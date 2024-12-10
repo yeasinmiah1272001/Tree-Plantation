@@ -38,12 +38,11 @@ export const counterSlice = createSlice({
 
     decressQuantity: (state, action) => {
       const existProduct = state.cart.find(
-        // @ts-ignore
         (item) => item.id === action.payload
       );
-      // @ts-ignore
+      // @ts-expect-error
       if (existProduct.quantity > 1) {
-        // @ts-ignore
+        // @ts-expect-error
         existProduct.quantity -= 1;
       }
     },
