@@ -27,6 +27,27 @@ export const counterSlice = createSlice({
       }
     },
 
+    incressQuantity: (state, action) => {
+      const existProduct = state.cart.find(
+        (item) => item.id === action.payload
+      );
+      if (existProduct) {
+        existProduct.quantity! += 1;
+      }
+    },
+
+    decressQuantity: (state, action) => {
+      const existProduct = state.cart.find(
+        // @ts-ignore
+        (item) => item.id === action.payload
+      );
+      // @ts-ignore
+      if (existProduct.quantity > 1) {
+        // @ts-ignore
+        existProduct.quantity -= 1;
+      }
+    },
+
     deleteCount: (state, action) => {
       state.cart = state.cart.filter((item) => item.id !== action.payload);
     },
@@ -37,6 +58,12 @@ export const counterSlice = createSlice({
   },
 });
 
-export const { addTocart, reseetCart, deleteCount } = counterSlice.actions;
+export const {
+  addTocart,
+  reseetCart,
+  deleteCount,
+  incressQuantity,
+  decressQuantity,
+} = counterSlice.actions;
 
 export default counterSlice.reducer;
