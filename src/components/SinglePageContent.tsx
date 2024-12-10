@@ -1,10 +1,13 @@
 "use client";
 import React, { useState } from "react";
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
-import { BsCartPlus, BsTruck } from "react-icons/bs";
+import { BsTruck } from "react-icons/bs";
 import { BiRefresh } from "react-icons/bi";
-import { TreeBlogItem } from "../../type";
+
 import Image from "next/image";
+
+import FunctionalBtn from "./FunctionalBtn";
+import { TreeBlogItem } from "../../type";
 
 const SinglePageContent = ({ singleData }: { singleData: TreeBlogItem }) => {
   const [mainImage, setMainImage] = useState(singleData?.images[0]?.url);
@@ -106,22 +109,7 @@ const SinglePageContent = ({ singleData }: { singleData: TreeBlogItem }) => {
           </div> */}
 
           {/* Quantity Selector */}
-          <div className="flex items-center space-x-4 mb-6">
-            <div className="flex items-center border border-gray-300 rounded-lg">
-              <button className="px-4 py-2 hover:bg-gray-100">-</button>
-              <input
-                type="text"
-                value="2"
-                readOnly
-                className="w-12 text-center border-l border-r border-gray-300 focus:outline-none"
-              />
-              <button className="px-4 py-2 hover:bg-gray-100">+</button>
-            </div>
-            <button className="bg-pink-500 text-white px-6 py-2 rounded-lg hover:bg-pink-600 flex items-center space-x-2">
-              <BsCartPlus />
-              <span>Buy Now</span>
-            </button>
-          </div>
+          <FunctionalBtn singleData={singleData} />
 
           {/* Delivery & Return */}
           <div className="space-y-4">

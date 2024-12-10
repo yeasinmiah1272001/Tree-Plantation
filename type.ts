@@ -20,8 +20,15 @@ export interface TreeBlogItem {
   stock: number;
   rating: number;
   offer: string;
+  quantity?: number;
   category: string;
   images: {
     url: string;
   }[];
+}
+export interface StateType {
+  tree: {
+    cart: TreeBlogItem[];
+    // userInfo: any;
+  };
 }

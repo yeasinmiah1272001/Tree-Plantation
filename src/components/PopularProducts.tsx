@@ -10,6 +10,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import Icon from "./Icon";
+import { TreeBlogItem } from "../../type";
 
 const PopularProducts = () => {
   const [selectedProducts, setSelectedProducts] = useState("All");

@@ -33,10 +33,10 @@ const ShopPage = () => {
   });
 
   return (
-    <Container className="py-12 lg:py-24">
+    <Container className="py-12 lg:py-28">
       {/* Heading Section */}
-      <div className="text-center mb-10 space-y-6">
-        <h1 className="text-4xl font-extrabold text-gray-800 md:text-5xl">
+      <div className="text-center mb-6 mt-14 space-y-6">
+        <h1 className="text-3xl font-bold text-gray-800 md:text-5xl">
           All Tree Collection
         </h1>
         <Image

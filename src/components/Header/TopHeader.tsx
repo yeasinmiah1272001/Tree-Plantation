@@ -1,12 +1,15 @@
-import React from "react";
+"use client";
 import Container from "../Container";
 import Image from "next/image";
 import logo from "../../assets/logo.svg";
 import { FaShoppingBag, FaUser } from "react-icons/fa";
 import Link from "next/link";
 import SearchBar from "../SearchBar";
+import { useSelector } from "react-redux";
+import { StateType } from "../../../type";
 
 const TopHeader = () => {
+  const { cart } = useSelector((state: StateType) => state.tree);
   return (
     <div className="bg-white p-2 w-full border-b-2">
       <Container className="flex justify-between items-center gap-5">
@@ -38,7 +41,9 @@ const TopHeader = () => {
             </div>
             <div className="hidden sm:block">
               <h3 className="font-medium">My Cart</h3>
-              <p className="text-xs text-gray-500">(0) items</p>
+              <p className="text-sm text-red-500">
+                ( {cart.length ? cart.length : "0"} items)
+              </p>
             </div>
           </div>
         </div>

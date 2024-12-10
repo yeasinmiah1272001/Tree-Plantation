@@ -1,7 +1,7 @@
 export const navigationLinks = [
   { name: "Home", path: "/" },
   { name: "Shop", path: "/allshop" },
-  { name: "Blogs", path: "/blog" },
+  { name: "Gallary", path: "/gallery" },
   { name: "Orchid", path: "/orchid" },
   { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" },

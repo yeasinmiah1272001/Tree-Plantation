@@ -1,17 +1,16 @@
 import Link from "next/link";
 import React from "react";
 import { FaEye, FaHeart } from "react-icons/fa";
-import { FaCartShopping } from "react-icons/fa6";
 import { MdEdit } from "react-icons/md";
 import { TreeBlogItem } from "../../type";
+
+import AddToCartBtn from "./AddToCartBtn";
 
 const Icon = ({ item }: { item: TreeBlogItem }) => {
   return (
     <div className="absolute inset-0 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
       <div className="flex gap-3">
-        <span className="text-xl font-bold bg-green-300 p-2 rounded-md text-black">
-          <FaCartShopping />
-        </span>
+        <AddToCartBtn item={item} />
 
         <Link
           href={{
