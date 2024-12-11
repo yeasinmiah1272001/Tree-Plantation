@@ -8,6 +8,7 @@ import Image from "next/image";
 
 import FunctionalBtn from "./FunctionalBtn";
 import { TreeBlogItem } from "../../type";
+import PriceContainer from "./PriceContainer";
 
 const SinglePageContent = ({ singleData }: { singleData: TreeBlogItem }) => {
   const [mainImage, setMainImage] = useState(singleData?.images[0]?.url);
@@ -58,9 +59,7 @@ const SinglePageContent = ({ singleData }: { singleData: TreeBlogItem }) => {
             <span className="text-gray-600">(150 Reviews)</span>
           </div>
 
-          <p className="text-xl font-semibold text-gray-800 mb-4">
-            $ {singleData.price}
-          </p>
+          <PriceContainer singleData={singleData} />
           <p className="text-xl font-semibold text-gray-800  mb-4">
             {singleData.stock ? (
               <span className="text-green-600">

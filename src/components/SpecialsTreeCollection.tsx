@@ -10,6 +10,7 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { treeBlog } from "@/constant";
 import heading from "../assets/hedimg.png";
 import Icon from "./Icon";
+import PriceContainer from "./PriceContainer";
 
 const SpecialsTreeCollection = () => {
   const [hoveredProduct, setHoveredProduct] = useState<number | null>(null);
@@ -101,9 +102,10 @@ const SpecialsTreeCollection = () => {
                 </div>
               </div>
               {/* Price */}
-              <p className="text-lg font-semibold text-gray-800">
+              {/* <p className="text-lg font-semibold text-gray-800">
                 ${item.price}
-              </p>
+              </p> */}
+              <PriceContainer singleData={item} />
             </div>
           </SwiperSlide>
         ))}
