@@ -5,11 +5,10 @@ import logo from "../../assets/logo.svg";
 import { FaShoppingBag, FaUser } from "react-icons/fa";
 import Link from "next/link";
 import SearchBar from "../SearchBar";
-import { useSelector } from "react-redux";
-import { StateType } from "../../../type";
+
+import HeaderCartIcon from "../HeaderCartIcon";
 
 const TopHeader = () => {
-  const { cart } = useSelector((state: StateType) => state.tree);
   return (
     <div className="bg-white p-2 w-full border-b-2">
       <Container className="flex justify-between items-center gap-5">
@@ -35,17 +34,7 @@ const TopHeader = () => {
           </div>
 
           {/* My Cart */}
-          <div className="flex gap-2 items-center">
-            <div className="bg-green-300 rounded-md p-2">
-              <FaShoppingBag size={24} />
-            </div>
-            <div className="hidden sm:block">
-              <h3 className="font-medium">My Cart</h3>
-              <p className="text-sm text-red-500">
-                ( {cart.length ? cart.length : "0"} items)
-              </p>
-            </div>
-          </div>
+          <HeaderCartIcon />
         </div>
         {/* Mobile View - Search Bar, User, Cart */}
         <div className="flex sm:hidden items-center gap-5">
