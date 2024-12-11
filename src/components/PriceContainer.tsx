@@ -24,9 +24,9 @@ const PriceContainer = ({ singleData }: { singleData: TreeBlogItem }) => {
   return (
     <div className="flex items-center gap-4">
       <p className="line-through text-xl font-medium text-gray-400">
-        {oldPrice} $
+        {oldPrice.toFixed(2)} $
       </p>
-      <p className="text-xl font-medium">{mainPrice} $</p>
+      <p className="text-xl font-medium">{mainPrice.toFixed(2)} $</p>
     </div>
   );
 };
