@@ -3,11 +3,13 @@ import { TreeBlogItem } from "../../type";
 
 interface InitialState {
   cart: TreeBlogItem[];
+  // orderData: any[];
   // userInfo: any;
 }
 
 const initialState: InitialState = {
   cart: [],
+  // orderData: [],
   // userInfo: null,
 };
 
@@ -54,9 +56,16 @@ export const counterSlice = createSlice({
       state.cart = [];
     },
 
-    resetorder: (state) => {
-      state.cart = [];
-    },
+    // addOrder: (state, action) => {
+    //   const existingOrder = state.orderData.find(
+    //     (item) => item._id === action.payload._id
+    //   );
+    //   if (existingOrder) {
+    //     state.orderData.push(action.payload);
+    //   } else {
+    //     state.orderData = action.payload;
+    //   }
+    // },
   },
 });
 
@@ -66,7 +75,7 @@ export const {
   deleteCount,
   incressQuantity,
   decressQuantity,
-  resetorder,
+  // addOrder,
 } = counterSlice.actions;
 
 export default counterSlice.reducer;

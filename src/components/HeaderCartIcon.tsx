@@ -4,16 +4,26 @@ import { FaShoppingBag } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { StateType } from "../../type";
 import CartModal from "./CartModal";
+import { signIn, useSession } from "next-auth/react";
 
 const HeaderCartIcon = () => {
   const { cart } = useSelector((state: StateType) => state.tree);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { data: session } = useSession();
+
+  const handleCartClick = () => {
+    if (session?.user) {
+      setIsModalOpen(true); // Open the cart modal if the user is logged in
+    } else {
+      signIn(); // Redirect to the login page if the user is not logged in
+    }
+  };
 
   return (
     <>
       <div
         className="flex gap-2 items-center cursor-pointer"
-        onClick={() => setIsModalOpen(true)}
+        onClick={handleCartClick}
       >
         <div className="bg-green-300 rounded-md p-2">
           <FaShoppingBag size={24} />

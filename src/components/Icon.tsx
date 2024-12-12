@@ -5,25 +5,35 @@ import { MdEdit } from "react-icons/md";
 import { TreeBlogItem } from "../../type";
 
 import AddToCartBtn from "./AddToCartBtn";
+import { useSession } from "next-auth/react";
 
 const Icon = ({ item }: { item: TreeBlogItem }) => {
+  const { data: session } = useSession();
+
+  const redirectTo = (path: string) => {
+    if (session) {
+      return path;
+    } else {
+      return "/api/auth/signin";
+    }
+  };
+
   return (
     <div className="absolute inset-0 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
       <div className="flex gap-3">
         <AddToCartBtn item={item} />
 
+        {/* View Button */}
         <Link
-          href={{
-            pathname: `/singlepage/${item.id}`,
-          }}
+          href={redirectTo(`/singlepage/${item.id}`)}
           className="text-xl font-bold bg-green-300 p-2 rounded-md text-black"
         >
           <FaEye />
         </Link>
+
+        {/* Edit Button */}
         <Link
-          href={{
-            pathname: `/singlepage/${item.id}`,
-          }}
+          href={redirectTo(`/singlepage/${item.id}`)}
           className="text-xl font-bold bg-green-300 p-2 rounded-md text-black"
         >
           <MdEdit />

@@ -1,10 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { StateType } from "../../type";
 import { useSession } from "next-auth/react";
 import { loadStripe } from "@stripe/stripe-js";
-import { reseetCart } from "@/redux/treeSlice";
 
 const CartSummary = () => {
   const { cart } = useSelector((state: StateType) => state?.tree);
@@ -12,7 +11,6 @@ const CartSummary = () => {
   const [discount, setDiscount] = useState(0);
   const [total, setTotal] = useState(0);
   const { data: session } = useSession();
-  const dispatch = useDispatch();
 
   useEffect(() => {
     if (cart && cart.length > 0) {
@@ -62,7 +60,6 @@ const CartSummary = () => {
     console.log("res", data);
     if (response.ok) {
       stripe?.redirectToCheckout({ sessionId: data.id });
-      dispatch(reseetCart());
     } else {
       throw new Error("Failed to create Stripe Payment");
     }
