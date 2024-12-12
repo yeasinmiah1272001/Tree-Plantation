@@ -7,6 +7,8 @@ import FunctionalBtn from "./FunctionalBtn";
 import PriceContainer from "./PriceContainer";
 import { deleteCount } from "@/redux/treeSlice";
 import toast from "react-hot-toast";
+import CartSummary from "./CartSummary";
+import Link from "next/link";
 
 const CartItem = () => {
   const { cart } = useSelector((state: StateType) => state.tree);
@@ -20,6 +22,9 @@ const CartItem = () => {
         <div className="bg-white shadow-md rounded-md p-4 text-center">
           <p className="text-lg">Your cart is empty.</p>
         </div>
+        <button className="mt-6 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">
+          <Link href={"/"}>Back Home</Link>
+        </button>
       </div>
     );
   }
@@ -36,15 +41,15 @@ const CartItem = () => {
             <h2 className="text-lg font-semibold">Price</h2>
             <h2 className="text-lg font-semibold">Remove</h2>
           </div>
-          {cart.map((item) => (
+          {cart.map((item, index) => (
             <div
-              key={item.id}
+              key={index}
               className="flex items-center justify-between py-4 border-b last:border-none"
             >
               {/* Image and Title */}
               <div className="flex items-center space-x-4">
                 <Image
-                  src={item.images[0].url}
+                  src={item.images?.[0]?.url || "/placeholder.png"}
                   alt="image"
                   height={80}
                   width={80}
@@ -77,24 +82,7 @@ const CartItem = () => {
         </div>
 
         {/* Cart Summary */}
-        <div className="bg-gray-100 shadow-md rounded-md p-4 w-full lg:w-1/3">
-          <h2 className="text-2xl font-semibold mb-4">Cart Summary</h2>
-          <div className="flex justify-between py-2">
-            <span className="text-lg">Subtotal</span>
-            <span className="text-lg font-medium">{/* Total Price */}</span>
-          </div>
-          <div className="flex justify-between py-2">
-            <span className="text-lg">Shipping</span>
-            <span className="text-lg font-medium">{/* Shipping Cost */}</span>
-          </div>
-          <div className="flex justify-between py-2 border-t mt-4 pt-4">
-            <span className="text-xl font-bold">Total</span>
-            <span className="text-xl font-bold">{/* Total Amount */}</span>
-          </div>
-          <button className="mt-6 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">
-            Proceed to Checkout
-          </button>
-        </div>
+        <CartSummary />
       </div>
     </div>
   );

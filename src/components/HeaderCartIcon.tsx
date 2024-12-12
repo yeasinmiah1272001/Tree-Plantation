@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { FaShoppingBag } from "react-icons/fa";
 import { useSelector } from "react-redux";
@@ -19,7 +20,9 @@ const HeaderCartIcon = () => {
         </div>
         <div className="hidden sm:block">
           <h3 className="font-medium">My Cart</h3>
-          <p className="text-sm text-red-500">({cart.length || 0} items)</p>
+          <p className="text-sm text-red-500">
+            ({cart.length ? cart.length : "0"})
+          </p>
         </div>
       </div>
       {isModalOpen && (

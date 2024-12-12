@@ -18,14 +18,14 @@ const CartModal: React.FC<CartModalProps> = ({ onClose, cartItems }) => {
         <h2 className="text-lg font-bold mb-4">Cart Items</h2>
         <ul className="mb-4">
           {cartItems.length ? (
-            cartItems.map((item) => (
+            cartItems.map((item, index) => (
               <div
-                key={item.id}
+                key={index}
                 className="border-b py-2 flex items-center justify-between"
               >
                 <Image
                   className="w-16 h-10"
-                  src={item.images[0]?.url || "/placeholder.png"} // Fallback for missing image
+                  src={item.images?.[0]?.url || "/placeholder.png"} // Fallback for missing image
                   alt="image"
                   height={100}
                   width={100}
