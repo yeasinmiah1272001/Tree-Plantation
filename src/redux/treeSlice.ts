@@ -53,6 +53,10 @@ export const counterSlice = createSlice({
     reseetCart: (state) => {
       state.cart = [];
     },
+
+    resetorder: (state) => {
+      state.cart = [];
+    },
   },
 });
 
@@ -62,6 +66,7 @@ export const {
   deleteCount,
   incressQuantity,
   decressQuantity,
+  resetorder,
 } = counterSlice.actions;
 
 export default counterSlice.reducer;
