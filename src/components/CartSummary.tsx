@@ -10,22 +10,30 @@ const CartSummary = () => {
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
-    // Calculate subtotal
-    const calculatedSubtotal = cart.reduce(
-      (sum, item) => sum + item?.price * item?.quantity!,
-      0
-    );
-    setSubtotal(calculatedSubtotal);
+    if (cart && cart.length > 0) {
+      // Calculate subtotal
+      const calculatedSubtotal = cart.reduce(
+        (sum, item) => sum + (item?.price ?? 0) * (item?.quantity ?? 0),
+        0
+      );
+      setSubtotal(calculatedSubtotal);
 
-    // Calculate discount
-    const calculatedDiscount = cart.reduce(
-      (sum, item) => sum + (item?.old_price - item?.price) * item?.quantity!,
-      0
-    );
-    setDiscount(calculatedDiscount);
+      // Calculate discount
+      const calculatedDiscount = cart.reduce(
+        (sum, item) =>
+          sum +
+          ((item?.old_price ?? 0) - (item?.price ?? 0)) * (item?.quantity ?? 0),
+        0
+      );
+      setDiscount(calculatedDiscount);
 
-    // Calculate total
-    setTotal(calculatedSubtotal - calculatedDiscount);
+      // Calculate total
+      setTotal(calculatedSubtotal - calculatedDiscount);
+    } else {
+      setSubtotal(0);
+      setDiscount(0);
+      setTotal(0);
+    }
   }, [cart]);
 
   return (
