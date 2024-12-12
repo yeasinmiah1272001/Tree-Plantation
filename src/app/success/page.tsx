@@ -12,15 +12,17 @@ const SuccessPage = () => {
   const sessionId = serchParams.get("session_id");
   const dispatch = useDispatch();
 
-  !sessionId && redirect("/");
+  if (!sessionId) {
+    redirect("/");
+  }
 
   useEffect(() => {
     if (sessionId) {
       dispatch(reseetCart());
-
-      toast.success("payment receive");
+      toast.success("Payment received");
     }
   }, [sessionId, dispatch]);
+
   return (
     <div className="min-h-screen flex flex-col justify-center items-center bg-gray-100">
       <div className="bg-white shadow-lg p-8 rounded-lg text-center">
@@ -40,7 +42,7 @@ const SuccessPage = () => {
             href="/"
             className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition duration-300 ease-in-out"
           >
-            Continue Shopping
+            Continue Tree Collections
           </Link>
         </div>
       </div>
