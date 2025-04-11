@@ -26,8 +26,6 @@ const SpecialsTreeCollection = () => {
             src={heading}
             alt="Popular Tree Collection Image"
             className="mx-auto object-cover"
-            width={500} // Adjusted width for responsiveness
-            height={300} // Adjusted height
           />
         </div>
       </div>
